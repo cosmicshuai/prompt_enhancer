@@ -1,5 +1,3 @@
-"""Non-streaming Claude API helper for the template creation wizard."""
-
 from __future__ import annotations
 
 import re
