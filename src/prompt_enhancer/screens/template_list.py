@@ -69,13 +69,29 @@ class TemplateListScreen(Screen):
         if template:
             self.app.push_screen(SessionScreen(template=template, config=config))
 
+    def on_screen_resume(self) -> None:
+        self._refresh_list()
+
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "btn-new-template":
-            from prompt_enhancer.screens.template_editor import TemplateEditorScreen
+            from prompt_enhancer.config import load_config
 
-            self.app.push_screen(
-                TemplateEditorScreen(), callback=lambda _: self._refresh_list()
+            config = load_config()
+            if not config.api_key:
+                self.notify(
+                    "Please set your API key in Settings first.",
+                    severity="error",
+                )
+                from prompt_enhancer.screens.settings import SettingsScreen
+
+                self.app.push_screen(SettingsScreen())
+                return
+
+            from prompt_enhancer.screens.template_wizard import (
+                TemplateWizardScreen,
             )
+
+            self.app.push_screen(TemplateWizardScreen(config))
         elif event.button.id == "btn-edit-template":
             self._edit_selected()
         elif event.button.id == "btn-delete-template":
