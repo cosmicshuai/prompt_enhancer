@@ -1,0 +1,264 @@
+/* ─── Global ─── */
+Screen {
+    background: $background;
+}
+
+.field-label {
+    text-style: bold;
+    color: $text;
+    margin: 1 0 0 0;
+    padding: 0 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ─── API Key Prompt (first-run modal) ─── */
+ApiKeyPromptScreen {
+    align: center middle;
+    background: $background 80%;
+}
+
+#api-key-prompt-container {
+    width: 64;
+    height: auto;
+    max-height: 80%;
+    padding: 2 4;
+    background: $panel;
+    border: solid $primary-darken-1;
+}
+
+#api-key-prompt-title {
+    text-align: center;
+    text-style: bold;
+    color: $primary-lighten-2;
+    width: 100%;
+    padding: 1 0;
+}
+
+#api-key-prompt-desc {
+    color: $text-muted;
+    text-align: center;
+    width: 100%;
+    padding: 0 2 1 2;
+}
+
+#api-key-prompt-input {
+    margin: 1 2;
+}
+
+#api-key-prompt-status {
+    height: auto;
+    text-align: center;
+    padding: 0 2;
+    margin-bottom: 1;
+}
+
+#btn-api-key-submit {
+    width: 100%;
+    margin: 0 2;
+}
+
+/* ─── Main Menu ─── */
+#menu-container {
+    width: 56;
+    height: auto;
+    padding: 2 3;
+}
+
+#menu-title {
+    text-align: center;
+    text-style: bold;
+    color: $primary-lighten-2;
+    width: 100%;
+    padding: 1 0 0 0;
+}
+
+#menu-subtitle {
+    text-align: center;
+    color: $text-muted;
+    width: 100%;
+    padding: 0 2 2 2;
+    border-bottom: solid $primary-background-darken-2;
+}
+
+#menu-container Button {
+    width: 100%;
+    margin: 0 0 1 0;
+}
+
+/* ─── Template List ─── */
+#template-list-container {
+    padding: 1 3;
+}
+
+#template-list-title {
+    text-style: bold;
+    color: $primary-lighten-2;
+    padding: 1 0;
+}
+
+#template-option-list {
+    height: 1fr;
+    margin: 0 0 1 0;
+    border-top: solid $primary-background;
+    border-bottom: solid $primary-background;
+}
+
+#template-list-buttons {
+    height: auto;
+    align: center middle;
+    padding: 1 0;
+}
+
+#template-list-buttons Button {
+    margin: 0 1;
+}
+
+/* ─── Template Editor (modal) ─── */
+TemplateEditorScreen {
+    align: center middle;
+    background: $background 80%;
+}
+
+#editor-container {
+    width: 80%;
+    height: 85%;
+    padding: 1 3;
+    background: $panel;
+    border: solid $primary-darken-1;
+}
+
+#editor-title {
+    text-style: bold;
+    color: $primary-lighten-2;
+    padding: 1 0;
+}
+
+#editor-scroll {
+    height: 1fr;
+    margin: 0 0 1 0;
+}
+
+#editor-container TextArea {
+    height: 6;
+    margin: 0 0 1 0;
+}
+
+#editor-buttons {
+    height: auto;
+    align: center middle;
+    dock: bottom;
+    padding: 1 0;
+}
+
+#editor-buttons Button {
+    margin: 0 1;
+}
+
+/* ─── Session ─── */
+#session-container {
+    padding: 1 3;
+}
+
+#session-title {
+    text-style: bold;
+    color: $primary-lighten-2;
+    padding: 1 0;
+}
+
+#session-welcome {
+    height: 1fr;
+    content-align: center middle;
+    color: $text-muted;
+}
+
+#conversation-log {
+    height: 1fr;
+    margin: 0 0 1 0;
+    padding: 1 1;
+}
+
+#streaming-indicator {
+    height: auto;
+    max-height: 4;
+    overflow-y: hidden;
+    padding: 0 1;
+}
+
+#enhanced-section {
+    height: auto;
+    border-top: solid $success-darken-3;
+    padding: 1 0;
+}
+
+#enhanced-label {
+    text-style: bold;
+    color: $success;
+    padding: 0 0 0 0;
+}
+
+#enhanced-prompt-display {
+    height: 8;
+    margin: 0 0 1 0;
+}
+
+#enhanced-section Button {
+    margin: 0 0 1 0;
+}
+
+#session-input {
+    width: 100%;
+}
+
+/* ─── Settings ─── */
+#settings-outer {
+    align: center top;
+    padding: 2 0;
+}
+
+#settings-container {
+    width: 60;
+    height: auto;
+    padding: 1 3;
+}
+
+#settings-title {
+    text-style: bold;
+    color: $primary-lighten-2;
+    padding: 1 0;
+    border-bottom: solid $primary-background-darken-2;
+}
+
+#settings-container Input {
+    margin: 0 0 1 0;
+}
+
+#settings-container Select {
+    margin: 0 0 1 0;
+}
+
+#settings-api-key-section {
+    height: auto;
+    padding: 1 0;
+    border-bottom: solid $primary-background-darken-2;
+}
+
+#settings-general-section {
+    height: auto;
+    padding: 1 0;
+}
+
+#settings-api-key-buttons,
+#settings-general-buttons {
+    height: auto;
+    align: center middle;
+    padding: 1 0;
+}
+
+#settings-api-key-buttons Button,
+#settings-general-buttons Button {
+    width: auto;
+    margin: 0 1;
+}
